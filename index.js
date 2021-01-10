@@ -21,8 +21,6 @@ async function getData(date) {
   data = await fetch(API_URL);
   dataJSON = await data.json();
 
-  console.log(dataJSON.data);
-
   if (Object.keys(dataJSON.data).length > 0) {
     tvPrograms = [...dataJSON.data].map((tvProgram) => {
       return {
